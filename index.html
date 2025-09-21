@@ -198,15 +198,6 @@
         let raycaster, mouse;
         const visualizationContainer = document.getElementById('visualization-container');
         const inputArea = document.getElementById('input-area');
-        const loadBtn = document.getElementById('load-btn');
-        const undoBtn = document.getElementById('undo-btn');
-        const redoBtn = document.getElementById('redo-btn');
-        const downloadBtn = document.getElementById('download-btn');
-        const shareBtn = document.getElementById('share-btn');
-        const detailsModal = document.getElementById('details-modal');
-        const detailsContent = document.getElementById('details-content');
-        const closeModalBtn = document.getElementById('close-modal');
-        const colorKey = document.getElementById('color-key');
 
         // Auto-fill repository JSON
         const repoJsonData = JSON.parse(`
@@ -253,6 +244,15 @@
         `);
         inputArea.value = JSON.stringify(repoJsonData, null, 2);
         loadVisualization(); // Automatically load the visualization
+        const loadBtn = document.getElementById('load-btn');
+        const undoBtn = document.getElementById('undo-btn');
+        const redoBtn = document.getElementById('redo-btn');
+        const downloadBtn = document.getElementById('download-btn');
+        const shareBtn = document.getElementById('share-btn');
+        const detailsModal = document.getElementById('details-modal');
+        const detailsContent = document.getElementById('details-content');
+        const closeModalBtn = document.getElementById('close-modal');
+        const colorKey = document.getElementById('color-key');
 
         let history = [];
         let historyIndex = -1;
@@ -331,7 +331,6 @@
                     const decodedData = atob(encodedData);
                     const initialJson = JSON.parse(decodedData);
                     inputArea.value = JSON.stringify(initialJson, null, 2);
-                    loadVisualization();
                 } catch (e) {
                     console.error("Failed to load JSON from URL:", e);
                 }
