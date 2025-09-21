@@ -1,0 +1,48 @@
+{
+  "name": "MyRepo",
+  "type": "folder",
+  "children": [
+    {
+      "name": "src",
+      "type": "folder",
+      "children": [
+        {
+          "name": "index.js",
+          "type": "file",
+          "content": "console.log('Hello, world!');\n\nconst main = () => {\n  // Your amazing code here...\n};"
+        },
+        {
+          "name": "utils.js",
+          "type": "file",
+          "content": "export const formatName = (name) => name.toUpperCase();"
+        }
+      ]
+    },
+    {
+      "name": "public",
+      "type": "folder",
+      "children": [
+        {
+          "name": "index.html",
+          "type": "file",
+          "content": "<!DOCTYPE html>\n<html>\n  <body>\n    <h1>My App</h1>\n  </body>\n</html>"
+        },
+        {
+          "name": "styles.css",
+          "type": "file",
+          "content": "body { background-color: #222; }"
+        }
+      ]
+    },
+    {
+      "name": "README.md",
+      "type": "file",
+      "content": "# My Awesome Project\n\nThis project visualizes a repository's file structure in 3D."
+    },
+    {
+      "name": "package.json",
+      "type": "file",
+      "content": "{\n  \"name\": \"my-repo\",\n  \"version\": \"1.0.0\"\n}"
+    }
+  ]
+}
