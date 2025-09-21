@@ -208,6 +208,52 @@
         const closeModalBtn = document.getElementById('close-modal');
         const colorKey = document.getElementById('color-key');
 
+        // Auto-fill repository JSON
+        const repoJsonData = JSON.parse(`
+{
+  "name": "new-hacker-app",
+  "type": "folder",
+  "children": [
+    {
+      "name": "gh3d-app",
+      "type": "folder",
+      "children": [
+        {
+          "name": ".directory",
+          "type": "file"
+        },
+        {
+          "name": "close-by.png",
+          "type": "file"
+        },
+        {
+          "name": "gh3d-viz.webp",
+          "type": "file"
+        },
+        {
+          "name": "gh3d.html",
+          "type": "file"
+        },
+        {
+          "name": "index-js-modal.png",
+          "type": "file"
+        },
+        {
+          "name": "json-data.txt",
+          "type": "file"
+        }
+      ]
+    },
+    {
+      "name": "index.html",
+      "type": "file"
+    }
+  ]
+}
+        `);
+        inputArea.value = JSON.stringify(repoJsonData, null, 2);
+        loadVisualization(); // Automatically load the visualization
+
         let history = [];
         let historyIndex = -1;
         let currentRepoData;
